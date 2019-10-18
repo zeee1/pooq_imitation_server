@@ -1,0 +1,15 @@
+#atf-area{
+}
+
+#videoBox{
+	display:inline;
+	float:left;
+	width: 640;
+}
+
+#videoInfoBox{
+	width: 300;
+	overflow: scroll;
+	height: 360;
+	padding : 10;
+}

@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+
+.jarvis-css-animate {
+  	-webkit-transition:all ease-in 0.3s;
+    -moz-transition:all ease-in 0.3s;
+	-ms-transition:all ease-in 0.3s;
+	-o-transition:all ease-in 0.3s;
+	transition:all ease-in 0.3s;
+}

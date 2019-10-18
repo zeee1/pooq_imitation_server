@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title>test pooq player</title>
+		<link rel="stylesheet" type="text/css" href="/static/testplatform/css/videoplayer.css">
+		<link rel="stylesheet" type="text/css" href="/static/testplatform/css/vod.192ce448709e784c5f05a809783a16fa.css">
+		<script>var videoURL = "{{video_url}}"</script>
+		<script>
+			window.onbeforeunload = function() {
+  				localStorage.clear();
+  				return '';
+			};
+		</script>
+	</head>
+	<body>
+		<script type="text/javascript" src="/static/testplatform/js/pageload2.js"></script>
+		<script src="/static/testplatform/js/hls/hls.js"></script>
+		<div id='g-contents'>
+		</div>
+		<div class = "footer">
+			<div class = "footer-notice">
+			</div>
+			<div class = "footer-menu">
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,12 @@
+[
+	{
+		"contentId":"K02_LS-20190224105217-01-000.2",
+		"programId":"K02_T2005-0230_2",
+		"vodurl":"http://168.188.129.40/returnOfSuperman/superman.m3u8",
+	},
+	{
+		"contentId":"M_1002831100332100000.1",
+		"programId":"M_1002831100000100000",
+		"vodurl": "http://168.188.129.40/liveAlone/livealone.m3u8"
+	}
+]

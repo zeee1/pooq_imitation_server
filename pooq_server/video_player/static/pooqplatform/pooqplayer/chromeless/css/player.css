@@ -1,0 +1,277 @@
+@charset "utf-8";
+
+
+/* @ PLAYER */
+
+.player {position:absolute; left:0px; top:0px; width:100%; height:100%; background:#000; overflow: hidden;}
+.player .init-image {position:absolute; left:0; top: 0; width:100%; height:100%; z-index:111; object-fit:contain} 
+.player .screen {left:0; top: 0; width:100%; height:100%} 
+.player .uis {position:absolute; left:0; top: 0; width:100%; height:100%; z-index:555}
+/* @ Controls Buttons */
+
+.player .uis .top-bar {position:absolute; left:0; top: 0; width:100%; height:180px; opacity: 0.4; background-image: linear-gradient(to top, rgba(0, 0, 0, 0), #000000);}
+.player .uis .bottom-bar {position:absolute; left:0; bottom: 0; width:100%; height:180px; opacity: 0.4; background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000000);}
+.player .uis .top-area {width:100%; margin-top:8px}
+.player .uis .bottom-area {width:100%; bottom:0}
+.player .uis .view-area {position:absolute; width:100%; height:100%;}
+.player .uis .ui-area {position:absolute; width:100%; height:100%;}
+.player .uis .setup-area {position:absolute; right:60px; bottom:0; z-index:666}
+
+
+.player .uis .top-bar-hidden{opacity: 0}
+.player .uis .bottom-bar-hidden{opacity: 0}
+.player .uis .top-area-hidden{margin-top:-60px}
+.player .uis .bottom-area-half{bottom:-50px}
+.player .uis .bottom-area-hidden{bottom:-145px}
+.player .uis .bottom-area-up{margin-bottom:55px}
+
+.player .uis .ui-area-hidden{opacity: 0}
+.player .uis .setup-area-hidden{opacity: 0; bottom:20px;}
+.player .uis .add-on-area{position:absolute; left:0; bottom:0; width:100%; height:100%;}
+
+.player .uis .btn-ui {width:35px; height:35px}
+
+.player .uis .brands-box{position:absolute;  width:100%; height:100%; top:0; left:0}
+.player .uis .brands-box .banner{position:absolute; background:#000; cursor:pointer}
+
+
+.player .uis .ad-box{position:absolute;  width:100%; height:85px; bottom:90px; left:0}
+.player .uis .ad-box .btn-ad{margin-left:12px; width:85px; height:85px; background:url("../images/2X/btn_ad.png") no-repeat; background-size:85px 85px}
+.player .uis .ad-box .btn-skip{margin-right:12px; width:139px; height:37px; margin-top:29px; background:url("../images/trensparent70.png") repeat;}
+
+.player .uis .next-episode-box{position:absolute; height:70px; bottom:90px; right:0; background:url("../images/trensparent70.png") repeat;} 
+.player .uis .next-episode-box-hidden{right:-400px;}
+.player .uis .next-episode-box .img-box{position:relative; width:125px; height:70px; overflow: hidden; cursor:pointer}
+.player .uis .next-episode-box .img-box .img{position:absolute; left:0; top:0; width:125px; height:70px;}
+.player .uis .next-episode-box .img-box .img-over{ left:-13px; top:-7px; width:150px; height:84px;}
+.player .uis .next-episode-box .btn-play{width:160px; height:100%; text-align:center; line-height:25px}
+.player .uis .next-episode-box .btn-stop{color:#999; width:70px; height:100%; border-left: 1px solid #666}
+.player .uis .next-episode-box .btn-stop .btn-close {position:relative; width:30px; height:30px; margin-left:20px; background:url("../images/2X/btn_close.png") no-repeat; background-size:30px 30px}
+
+.player .uis .setup-box{position:absolute; right:0; bottom:-200px;}
+.player .uis .setup-box .box{position:relative; height: 166px;  -webkit-border-radius:5px; moz-border-radius:5px; border-radius:5px; overflow: hidden; background-color: #fff;}
+.player .uis .setup-box .box .title{color:#000}
+.player .uis .setup-box .box .title-selected{color:#8045dd}
+.player .uis .setup-box .box .title-passive{color:#999}
+.player .uis .setup-box .box .lists{height: 136px; padding:15px;  overflow: hidden}
+.player .uis .setup-box .box .lists .list{position:relative; height: 28px}
+.player .uis .setup-box .box .lists .list .title {margin-top:6px; width:65px;}
+.player .uis .setup-box .box .sub-lists{height: 136px; width: 134px; padding:15px; background-color: #f2f2f2; overflow: hidden}
+.player .uis .setup-box .box .sub-lists .list{position:relative; height: 24px}
+.player .uis .setup-box .box .sub-lists .list .title {margin-top:3px;}
+.player .uis .setup-box .box .sub-lists .list .icon {margin-top:4px; margin-left:3px; height: 14px; width:31px}
+.player .uis .setup-box .box .sub-lists .list .switch {margin-top:1px; margin-left:5px;}
+.player .uis .setup-box .point{position:relative; right:40px; ;width: 0; height: 0; border-left: 10px solid transparent; border-right: 10px solid transparent; border-top: 13px solid #fff}
+.player .uis .setup-box .point-sub{border-top: 13px solid #f2f2f2}
+
+
+.player .uis .ui-box{}
+.player .uis .ui-box .seek-info{width: 400px; height: 92px; margin: -46px 0 0 -200px; text-align:center;}
+.player .uis .ui-box .ui-set{width:396px; height:120px; margin: -60px 0 0 -198px;}
+.player .uis .ui-box .ui-set .btn-front {width:68px; height:68px; margin-top:26px; background:url("../images/2X/btn_front.png") no-repeat; background-size:68px 68px}
+.player .uis .ui-box .ui-set .btn-center{width:80px; height:80px; margin: -40px 0 0 -40px;cursor:pointer; }
+.player .uis .ui-box .ui-set .btn-play {margin:0; width:100%; height:100%; cursor:pointer; background:url("../images/2X/btn_play.png") no-repeat; background-size:80px 80px}
+.player .uis .ui-box .ui-set .btn-pause {margin:0; width:100%; height:100%; cursor:pointer; background:url("../images/2X/btn_pause.png") no-repeat; background-size:80px 80px}
+.player .uis .ui-box .ui-set .btn-back {width:68px; height:68px; margin-top:26px; cursor:pointer; background:url("../images/2X/btn_back.png") no-repeat; background-size:68px 68px}
+
+.player .uis .seek-box {width:100%; height:83px}
+
+.player .uis .seek-box .bar{position: relative; margin-right:15px; margin-left:15px;  height:30px}
+.player .uis .seek-box .bar .bar-progress{position:absolute; left:0; top:18px; width:100%; height:6px;  -webkit-border-radius:5px; moz-border-radius:5px; border-radius:5px}
+.player .uis .seek-box .bar .progress-range{background:#fff; opacity:0.24}
+.player .uis .seek-box .bar .progress-prev{background:#fff; opacity:0.5}
+.player .uis .seek-box .bar .progress-default{ background:linear-gradient(to right, #5654e1,#8d4fe3,#2ac5fe)}
+.player .uis .seek-box .bar .progress-quick{ background:linear-gradient(to right, #d206fc,#e82493,#ef8242)}
+.player .uis .seek-box .bar .progress-ad{ background:linear-gradient(to right, #2ba2e9,#79ed8f)}
+.player .uis .seek-box .bar .seek-range{position:absolute; cursor:pointer; height:100%}
+.player .uis .seek-box .bar .thumb{position:absolute; margin-left:-9px; left:50%; width:17px; height:17px; top:13px; cursor:pointer;
+									background:url("../images/2X/thumb_volume.png") no-repeat; background-size:17px 17px; z-index:10;}
+
+.player .uis .seek-box .bar .flag{position:absolute; width:24px; height:100%; cursor:pointer; margin-left:-12px}
+.player .uis .seek-box .bar .flag .text{width:100%; height:13px}
+.player .uis .seek-box .bar .flag .point{margin-left:10px; margin-top:6px; width:4px; height:4px; background:url("../images/2X/btn_seek_point.png") no-repeat; background-size:4px 4px}
+.player .uis .seek-box .preview{ text-align:center; text-shadow: 0 0 5px #000000; position:absolute; left:0; top:0px;  
+								 padding: 5px; display: none; background:url("../images/trensparent70.png") repeat;}
+
+
+.player .uis .play-box {height:35px; bottom:4px}
+.player .uis .play-box .btn-play{background:url("../images/2X/btn_play_s.png") no-repeat; background-size:35px 35px}
+.player .uis .play-box .btn-pause{background:url("../images/2X/btn_pause_s.png") no-repeat; background-size:35px 35px}
+
+.player .uis .volume-box {bottom:4px; margin-left:5px;}
+.player .uis .volume-box .btn-volume{}
+.player .uis .volume-box .btn-volume-on { background:url("../images/2X/btn_volume_on.png") no-repeat; background-size:35px 35px}
+.player .uis .volume-box .btn-volume-off { background:url("../images/2X/btn_volume_off.png") no-repeat; background-size:35px 35px}
+.player .uis .volume-box .text{overflow:hidden;  top:10px; margin-right:3px;}
+.player .uis .volume-box .text-time{text-align:left}
+.player .uis .volume-box .text-duration{text-align:left }
+
+.player .uis .volume-box .bar{height:17px; width:85px; margin-left:5px; margin-top:9px; margin-right:10px; }
+.player .uis .volume-box .bar .bar-progress{position:absolute; margin-top:5px; width:100%; height:6px; -webkit-border-radius:5px; moz-border-radius:5px; border-radius:5px }
+.player .uis .volume-box .bar .progress-range{background:#fff; opacity:0.24}
+.player .uis .volume-box .bar .progress-prev{background:#fff; opacity:0.5}
+.player .uis .volume-box .bar .progress-default{ background:#2ac5fe}
+.player .uis .volume-box .bar .volume-range{position:absolute; cursor:pointer; height:100%}
+.player .uis .volume-box .bar .thumb{position:absolute; margin-left:-9px; left:50%; width:17px; height:17px; cursor:pointer;
+									background:url("../images/2X/thumb_volume.png") no-repeat; background-size:17px 17px}
+
+.player .uis .function-box {height:35px; bottom:4px}
+.player .uis .function-box .setup-set{width:35px; height:35px; margin-right:5px;}
+.player .uis .function-box .icon-quality{position:absolute; top:-10px; right:-10px; width:30px; height:30px; pointer-events:none;}
+.player .uis .function-box .btn-setup{position:absolute; top:0; left:0; background:url("../images/2X/btn_setup.png") no-repeat; background-size:35px 35px}
+.player .uis .function-box .btn-popup{margin-right:5px; background:url("../images/2X/btn_popup.png") no-repeat; background-size:35px 35px}
+.player .uis .function-box .btn-full-screen-on{background:url("../images/2X/btn_fullscreen_on.png") no-repeat; background-size:35px 35px}
+.player .uis .function-box .btn-full-screen-off{background:url("../images/2X/btn_fullscreen_off.png") no-repeat; background-size:35px 35px}
+
+.player .uis .share-box {height:35px}
+.player .uis .share-box .btn-setup{margin-right:5px; background:url("../images/2X/btn_setup.png") no-repeat; background-size:35px 35px}
+.player .uis .share-box .btn-cast{margin-right:5px; margin-top:2px; width:30px; height:30px}
+.player .uis .share-box .btn-share{margin-right:5px; background:url("../images/2X/btn_share.png") no-repeat; background-size:35px 35px}
+.player .uis .share-box .btn-download{margin-right:5px; background:url("../images/2X/btn_download.png") no-repeat; background-size:35px 35px}
+.player .uis .share-box .btn-tm{margin-right:5px; }
+.player .uis .share-box .btn-tm-on{background:url("../images/2X/btn_tm_on.png") no-repeat; background-size:35px 35px}
+.player .uis .share-box .btn-tm-off{background:url("../images/2X/btn_tm_off.png") no-repeat; background-size:35px 35px}
+.player .uis .share-box .text-info{margin-top:9px}
+
+
+.player .uis .info-box {height:35px}
+.player .uis .info-box .btn-homeshopping{width:150px; height:35px; margin-right:5px}
+.player .uis .info-box .text-info{margin-top:10px}
+.player .uis .info-box .icon{width:80px; height:22px; margin-top:6px; margin-left:5px}
+
+.player .uis .preview-box{width:100%; height:48px; background:url("../images/trensparent70.png") repeat; overflow: hidden}
+.player .uis .preview-box .msg{ margin-left:12px; margin-right:10px; margin-top:15px; margin-bottom:25px;}
+.player .uis .preview-box .btn-default{height:28px; margin-top:10px; margin-right:10px; padding-left:15px; padding-right:15px }
+
+
+.player .uis .view-box .info-set{width: 232px; height: 32px; margin: -130px 0 0 -132px; text-align:center; padding:16px}
+.player .uis .view-box .info-set .bg{position:absolute; width:100%; height:100%; top:0; left:0; background-color: #fff; opacity:0.1; -webkit-border-radius:33px; moz-border-radius:33px; border-radius:33px; }
+.player .uis .view-box .info-set .icon{position:relative; margin-bottom:5px; width: 32px; height: 32px; vertical-align:middle;} 
+.player .uis .view-box .info-set .text{position:relative; display:inline-block; padding:4px;}
+
+.screen .user-guide {position:absolute; top:0; left:0; width:100%; height:100%; z-index:999}
+.screen .user-guide .btn-close {position:absolute; width:30px; height:30px; top:10px; right:10px; background:url("../images/2X/btn_close.png") no-repeat; background-size:30px 30px}
+.screen .user-guide .guide{position:absolute; top:50px; left:10px; right:10px; bottom:0; background:url("../images/2X/info_guide.png") no-repeat; background-position:center; background-size: contain;} 
+
+
+.screen .complete-box {position:absolute; top:0; left:0; width:100%; height:100%; z-index:999}
+.screen .complete-box .info-title{width:100%; text-align:center}
+.screen .complete-box .btn-close {position:absolute; width:30px; height:30px; top:10px; right:10px; background:url("../images/2X/btn_close.png") no-repeat; background-size:30px 30px}
+.screen .complete-box .ui-area{position:absolute; top:0; left:0; width:100%; height:100%;}
+.screen .complete-box .replay-box{width:120px; height:150px; margin: -75px 0 0 -60px;}
+.screen .complete-box .replay-box .icon{width:120px; height:120px; background:url("../images/2X/btn_replay.png") no-repeat; background-size:120px 120px}
+.screen .complete-box .replay-box .text{text-align:center;}
+
+.screen .episode-complete-box{width:648px; height:230px; margin: -115px 0 0 -324px}
+.screen .episode-complete-box .ui-set{width:100%; margin-top:48px}
+.screen .episode-complete-box .ui-set .list{width:234px; height:158px; cursor:pointer}
+.screen .episode-complete-box .ui-set .list .img-box {position:relative; display:block; width:234px; height:132px; overflow:hidden}
+.screen .episode-complete-box .ui-set .list .img-box .img{position:absolute; width:234px; height:132px; left:0; top:0;}
+.screen .episode-complete-box .ui-set .list .img-box .img-over{width:280px; height:158px; left:-23px; top:-13px;}
+.screen .episode-complete-box .ui-set .list .text{text-align:center; margin-top:10px}
+.screen .episode-complete-box .btn-replay { width:60px; height:60px; margin:0 0 0 -30px; background:url("../images/2X/btn_replay.png") no-repeat; background-size:60px 60px}
+
+.screen .clip-complete-box{width:777px; height:362px; margin: -181px 0 0 -388px}
+.screen .clip-complete-box .ui-set{width:100%; height:100%;}
+.screen .clip-complete-box .ui-set .replay-box{width:96px; height:124px; margin: 119px 0 0 0;}
+.screen .clip-complete-box .ui-set .replay-box .icon{width:96px; height:96px; background:url("../images/2X/btn_replay.png") no-repeat; background-size:96px 96px}
+.screen .clip-complete-box .ui-set .replay-box .text{text-align:center;}
+.screen .clip-complete-box .ui-set .full-video {text-align:center; }
+.screen .clip-complete-box .ui-set .full-video .img-box {position:relative; display:block; width:478px; height:268px; overflow:hidden}
+.screen .clip-complete-box .ui-set .full-video .img-box .img{position:absolute;left:0; top:0; width:478px; height:268px;}
+.screen .clip-complete-box .ui-set .full-video .img-box .img-over{position:absolute; left:-48px; top:-27px; width:574px; height:322px;}
+.screen .clip-complete-box .ui-set .full-video .btn-full{width:261px; height:55px; margin-top:39px; text-align:center;}
+
+
+.screen .recommend-vod-box{width:800px; height:306px; margin: -153px 0 0 -400px}
+.screen .recommend-vod-box .info-title{line-height:35px}
+.screen .recommend-vod-box .ui-set{width:100%; height:188px; margin-top:40px}
+.screen .recommend-vod-box .ui-set .list-area{margin-left:10px; margin-right:10px; width:700px; height:100%;}
+.screen .recommend-vod-box .ui-set .btn-prev {margin-top:38px; width:40px; height:40px;  background:url("../images/2X/btn_prev.png") no-repeat; background-size:40px 40px}
+.screen .recommend-vod-box .ui-set .btn-next {margin-top:38px; width:40px; height:40px;  background:url("../images/2X/btn_next.png") no-repeat; background-size:40px 40px}
+.screen .recommend-vod-box .ui-set .btn-v{margin-top:74px;}
+.screen .recommend-vod-box .ui-set .btn-passive {cursor:default; opacity: 0.5}
+
+
+.screen .recommend-vod-box .ui-set .list-movie{position:absolute; top:0; left:0; width:130px; height:188px; cursor:pointer}
+.screen .recommend-vod-box .ui-set .list-movie .ani-body {position:absolute; top:0; left:0; width:100%; height:100%}
+.screen .recommend-vod-box .ui-set .list-movie .icon{width:34px; height:34px; position:absolute; top:5px; right:5px;}
+.screen .recommend-vod-box .ui-set .list-movie .img-box {position:relative; width:100%; height:100%; overflow:hidden}
+.screen .recommend-vod-box .ui-set .list-movie .img-box .img{position:absolute; left:0; top:0; width:130px; height:188px;}
+.screen .recommend-vod-box .ui-set .list-movie .img-box .img-over{left:-13px; top:-19px; width:156px; height:226px;}
+
+.screen .recommend-vod-box .ui-set .list-program{position:absolute; top:0; left:0; width:130px; height:240px; cursor:pointer}
+.screen .recommend-vod-box .ui-set .list-program .ani-body {position:absolute; top:0; left:0; width:100%; height:100%}
+.screen .recommend-vod-box .ui-set .list-program .img-box {position:relative;width:130px; height:188px; overflow:hidden}
+.screen .recommend-vod-box .ui-set .list-program .img-box .img{position:absolute; left:0; top:0; width:130px; height:188px;}
+.screen .recommend-vod-box .ui-set .list-program .img-box .img-over{left:-13px; top:-19px; width:156px; height:226px;}
+.screen .recommend-vod-box .ui-set .list-program .sub-title{opacity:0.7; width:100%; margin-top:10px} 
+
+
+.screen .recommend-vod-box .ui-set .list{position:absolute; top:0; left:0; width:206px; height:188px; cursor:pointer}
+.screen .recommend-vod-box .ui-set .list .ani-body {position:absolute; top:0; left:0; width:100%; height:100%}
+.screen .recommend-vod-box .ui-set .list .img-box {position:relative; width:206px; height:116px; overflow:hidden}
+.screen .recommend-vod-box .ui-set .list .img-box .img{position:absolute; left:0; top:0; width:206px; height:116px;}
+.screen .recommend-vod-box .ui-set .list .img-box .img-over{left:-21px; top:-12px; width:248px; height:140px;}
+.screen .recommend-vod-box .ui-set .list .title{width:100%; margin-top:10px}
+.screen .recommend-vod-box .ui-set .list .sub-title{opacity:0.7; width:100%; margin-top:2px} 
+
+.screen .list-box{position:absolute; top:0; right:0;  width:542px; height:100%; z-index:888; background:url("../images/list_bg.png") no-repeat; background-size:100% 100%}
+.screen .list-box-hidden{right:-542px;}
+.screen .btn-open-area {position:absolute; top:50%; right:452px; margin-top:-42px; width:84px; height:84px; z-index:889}
+.screen .btn-open-area-hidden{right:42px;}
+
+.screen .btn-open-area .btn-list-open  {margin:-42px 0 0 -42px; width:84px; height:84px;  background:url("../images/2X/btn_open_list.png") no-repeat; background-size:84px 84px}
+.screen .list-box .box{width:450px; height:100%;}
+
+
+.screen .list-box .box .top-navi{position:relative; margin-top:50px; margin-left:10px; margin-right:40px; height:86px;}
+.screen .list-box .box .top-navi .btn-navi{height:31px; opacity: 0.7}
+.screen .list-box .box .top-navi .btn-navi-margin{}
+.screen .list-box .box .top-navi .btn-navi-selected{opacity: 1.0}
+.screen .list-box .box .top-navi .pointer{position:absolute; top:50px; left:0; height:6px; background-color:#fff}
+.screen .list-box .box .loading-spiner { position: absolute; left: 50%; bottom: 20px}
+.screen .list-box .box .nodata{margin:-50px 0 0 -78px; width:157px; height:100px;}
+.screen .list-box .box .nodata .icon-nodata{margin-left:42px; width:74px; height:74px;  background:url("../images/2X/icon_nodata.png") no-repeat; background-size:74px 74px}
+.screen .list-box .box .nodata .text-nodata{width:100%; text-align: center; margin-top:10px}
+.screen .list-box .box .lists{width:100%; overflow: hidden;}
+.screen .list-box .box .lists .list{border: solid 0.5px rgba(0, 0, 0, 0)}
+.screen .list-box .box .lists .list-selected{box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.1); border: solid 0.5px #ffffff;}
+
+.screen .list-box .box .lists .vod-list{width:389px; height:89px; padding:10px; cursor:pointer;}
+.screen .list-box .box .lists .vod-list .img-box{width:160px; height:90px; margin-right:19px; overflow: hidden;}
+.screen .list-box .box .lists .vod-list .img-box .img{position:absolute; left:0; top:0; width:160px; height:90px;}
+.screen .list-box .box .lists .vod-list .img-box .img-over{left:-16px; top:-9px; width:192px; height:108px;}
+.screen .list-box .box .lists .vod-list .img-box .icon{width:60px; height:17px; position:absolute; top:2px; left:2px; display:none}
+.screen .list-box .box .lists .vod-list .img-box .progress{width:0; height:10px; position:absolute; top:80px; left:0px; background:linear-gradient(to right, #5654e1,#8d4fe3,#2ac5fe)}
+.screen .list-box .box .lists .vod-list .text-box{width:203px; overflow: hidden;}
+.screen .list-box .box .lists .vod-list .text-box .title{width:100%; margin-top:7px}
+.screen .list-box .box .lists .vod-list .text-box .sub-title{opacity:0.7; width:100%; margin-top:7px; line-height:23px} 
+
+.screen .list-box .box .lists .movie-list{width:389px; height:202px; padding:10px; cursor:pointer}
+.screen .list-box .box .lists .movie-list .img-box{width:140px; height:203px; margin-right:19px; overflow: hidden;}
+.screen .list-box .box .lists .movie-list .img-box .img{position:absolute; left:0; top:0; width:140px; height:203px;}
+.screen .list-box .box .lists .movie-list .img-box .img-over{left:-14px; top:-20px; width:168px; height:243px;}
+.screen .list-box .box .lists .movie-list .img-box .icon-age{position:absolute; width:35px; height:35px; top:5px; right:5px;}
+.screen .list-box .box .lists .movie-list .text-box{width:225px; overflow: hidden;}
+.screen .list-box .box .lists .movie-list .text-box .title{width:100%; margin-top:7px}
+.screen .list-box .box .lists .movie-list .text-box .star-box{width:100%; height:20px; margin-top:7px}
+.screen .list-box .box .lists .movie-list .text-box .rate-box {width:100px; height:20px;}
+.screen .list-box .box .lists .movie-list .text-box .star-box .star-rate{position:absolute; width:100px; height:20px; left:0; top:0; overflow: hidden;}
+.screen .list-box .box .lists .movie-list .text-box .star-box .star-off{position:absolute; top:0; width:20px; height:20px; background:url("../images/2X/icon_star_off.png") no-repeat; background-size:20px 20px}
+.screen .list-box .box .lists .movie-list .text-box .star-box .star-on{position:absolute; top:0; width:20px; height:20px; background:url("../images/2X/icon_star_on.png") no-repeat; background-size:20px 20px}
+.screen .list-box .box .lists .movie-list .text-box .star-box .text-duration{height:20px; margin-left:5px}
+.screen .list-box .box .lists .movie-list .text-box .sub-title
+{ display: -webkit-box; opacity:0.7; text-overflow: ellipsis; word-wrap: break-word; overflow: hidden; max-height:7.5em; line-height:1.5em;
+ width:100%; margin-top:20px; overflow:hidden; -webkit-line-clamp:5; -webkit-box-orient: vertical;} 
+
+.screen .list-box .box .lists .theme-list{position:relative; width:410px; height:186px; cursor:pointer; overflow: hidden;}
+.screen .list-box .box .lists .theme-list .img-box{width:100%; height:100%; overflow: hidden;  background:#000}
+.screen .list-box .box .lists .theme-list .img-box .img{position:absolute; left:0; top:0; width:410px; height:186px;}
+.screen .list-box .box .lists .theme-list .img-box .img-over{left:-41px; top:-19px; width:492px; height:224px;}
+
+.screen .list-box .box .lists .theme-list .title{position:absolute; left:15px; top:15px; width:345px; line-height:23px}
+.screen .list-box .box .lists .theme-list .text-list-num{position:absolute; right:12px; top:25px; text-align:right}
+.screen .list-box .box .lists .theme-list .icon-list-num{position:absolute; right:10px; top:10px; width:42px; height:42px;  background:url("../images/2X/icon_list_num.png") no-repeat; background-size:42px 42px}
+
+
